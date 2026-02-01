@@ -1,0 +1,200 @@
+*
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+/* font-family: gilroy; */
+font-family: "Inter", sans-serif;
+color:#fff;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+nav{
+    position: fixed;
+    display: flex;
+    /* background-color: rgb(0, 255, 72); */
+    background-color: #111;
+    height: 10vh;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2vw 10vw;
+    justify-content: space-between;
+    z-index:100;
+
+}
+.nav-part2{
+    display: flex;
+    gap:2vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+}
+.nav-part2 h4{
+    text-transform: uppercase;
+    font-size: 0.75vw;
+    font-weight: 600;
+    margin-bottom: 2.6vw;
+}
+.nav-elm h5{
+    margin-bottom: 1vw;
+    display: none;
+    overflow: hidden;
+}
+.nav-elm h5 span{
+    font-size: 0.77vw;
+    font-weight: 400;
+    display: inline-block;
+    transform: translateY(25px);
+
+}
+
+
+/* Good idea to make that animation with css but now doing with gsap */
+/* nav:hover #nav-bottom{
+    height: 18vh;
+}
+nav:hover .nav-elm h5{
+    opacity: 1;
+    transition: all ease 2s;
+} */
+
+
+#nav-bottom{
+    /* background-color: red; */
+    background-color: #111;
+    height: 0vh;
+    width: 80%;
+    transition: all ease 0.65s;
+    position: absolute;
+    top:100%;
+    z-index: 9;
+    border-bottom: 1px solid #dadada;
+
+}
+
+nav button{
+    background-color: #0da34e;
+    display: flex;
+    align-items: center;
+    padding: 12px 14px;
+    font-size: 0.85vw;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 50px;
+    border:none;
+}
+nav button svg{
+    height: 0.85vw;
+    margin-left: 1.65vw;
+}
+
+
+
+
+#page1{
+    width:100%;
+    height:100vh;
+    background-color: #111;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+}
+#page1 h1{
+    font-size:8.5vw;
+    text-transform: uppercase;
+    font-weight:900;
+    line-height: 8.5vw;
+    /* font-family: "Host Grotesk", sans-serif; */
+}
+
+#page1 h1 svg{
+    height: 6vw;
+    width: 6vw;
+    background-color: #0da34e;
+    border-radius: 50%;
+}
+#page1 p{
+    text-align: center;
+    font-weight: 300;
+    margin-top: 3vh;
+}
+
+.page1-bar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page1-bar h4{
+    font-weight: 300;
+    font-size: 1vw;
+    text-transform: lowercase;
+    padding: 6px;
+    margin-top: 0.2vw;
+    margin-right: 2px;
+    border: 1px solid #a19f9f;
+    border-radius: 30px;
+}
+.page1-bar h4:nth-last-child(2){
+    border:none;
+    padding: 2px;
+}
+
+#moving-div{
+    /* background-color: red; */
+    bottom: 5%;
+    position: absolute;
+    width: 44%;
+    white-space: nowrap;
+    padding: 1.2vw;
+    overflow: hidden;
+
+
+}
+#moving-div .move{
+    display: inline-block;
+        animation: moving 9s linear infinite;
+    
+}
+#moving-div .move img{
+    height: 1vw;
+    margin: 0 1.2vw;
+}
+@keyframes moving {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+    
+}
+
+#blur-left{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    background: linear-gradient(to left, transparent, #111);
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+#blur-right{
+    height: 100%;
+    width: 20%;
+    position: absolute;
+    background: linear-gradient(to right, transparent, #111);
+    top:0;
+    right: 0;
+}
+
+
+#page2{
+    width:100%;
+    height:100vh;
+    background-color: #111;
+}
