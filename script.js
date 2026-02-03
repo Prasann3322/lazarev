@@ -197,9 +197,9 @@ gridblocks.forEach(function(blocks){
 
 
 
-// nav_animation();
-// cursorfollow();
-// page3videoAnimation();
-// page6videohover();
-// page6left();
+nav_animation();
+cursorfollow();
+page3videoAnimation();
+page6videohover();
+page6left();
 page6videoup();
